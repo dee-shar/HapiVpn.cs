@@ -17,40 +17,40 @@ namespace HapiVpnApi
                 new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        public async Task<string> getAppSettings()
+        public async Task<string> GetAppSettings()
         {
             var response = await httpClient.GetAsync($"{apiUrl}/app-settings");
             response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsStringAsync();
         }
 
-        public async Task<string> getAppCategories()
+        public async Task<string> GetAppCategories()
         {
             var response = await httpClient.GetAsync($"{apiUrl}/categories/app");
             response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsStringAsync();
         }
 
-        public async Task<string> getAppContacts()
+        public async Task<string> GetAppContacts()
         {
             var response = await httpClient.GetAsync($"{apiUrl}/settings");
             response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsStringAsync();
         }
 
-        public async Task<string> getBanner()
+        public async Task<string> GetBanner()
         {
             var response = await httpClient.GetAsync($"{apiUrl}/banner");
             response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsStringAsync();
         }
-        public async Task<string> getPolling()
+        public async Task<string> GetPolling()
         {
             var response = await httpClient.GetAsync($"{apiUrl}/polling");
             response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsStringAsync();
         }
-        public async Task<string> getServers()
+        public async Task<string> GetServers()
         {
             var response = await httpClient.GetAsync($"{apiUrl}/vpn-module");
             response.EnsureSuccessStatusCode();

@@ -5,7 +5,6 @@ Mobile-API for [Hapi VPN](https://play.google.com/store/apps/details?id=com.hapi
 ```cs
 using System;
 using HapiVpnApi;
-using System.Threading.Tasks;
 
 namespace Application
 {

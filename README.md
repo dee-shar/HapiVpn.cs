@@ -14,7 +14,7 @@ namespace Application
         static async Task Main()
         {
             var api = new HapiVpn();
-            string appSettings = await api.getAppSettings();
+            string appSettings = await api.GetAppSettings();
             Console.WriteLine(appSettings);
         }
     }

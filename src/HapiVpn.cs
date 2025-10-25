@@ -1,7 +1,6 @@
 using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Threading.Tasks;
 
 namespace HapiVpnApi
 {
@@ -20,40 +19,34 @@ namespace HapiVpnApi
         public async Task<string> GetAppSettings()
         {
             var response = await httpClient.GetAsync($"{apiUrl}/app-settings");
-            response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsStringAsync();
         }
 
         public async Task<string> GetAppCategories()
         {
             var response = await httpClient.GetAsync($"{apiUrl}/categories/app");
-            response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsStringAsync();
         }
 
         public async Task<string> GetAppContacts()
         {
             var response = await httpClient.GetAsync($"{apiUrl}/settings");
-            response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsStringAsync();
         }
 
         public async Task<string> GetBanner()
         {
             var response = await httpClient.GetAsync($"{apiUrl}/banner");
-            response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsStringAsync();
         }
         public async Task<string> GetPolling()
         {
             var response = await httpClient.GetAsync($"{apiUrl}/polling");
-            response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsStringAsync();
         }
         public async Task<string> GetServers()
         {
             var response = await httpClient.GetAsync($"{apiUrl}/vpn-module");
-            response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsStringAsync();
         }
     }

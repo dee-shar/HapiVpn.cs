@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
@@ -39,11 +38,13 @@ namespace HapiVpnApi
             var response = await httpClient.GetAsync($"{apiUrl}/banner");
             return await response.Content.ReadAsStringAsync();
         }
+        
         public async Task<string> GetPolling()
         {
             var response = await httpClient.GetAsync($"{apiUrl}/polling");
             return await response.Content.ReadAsStringAsync();
         }
+        
         public async Task<string> GetServers()
         {
             var response = await httpClient.GetAsync($"{apiUrl}/vpn-module");

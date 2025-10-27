@@ -3,7 +3,6 @@ Mobile-API for [Hapi VPN](https://play.google.com/store/apps/details?id=com.hapi
 
 ## Example
 ```cs
-using System;
 using HapiVpnApi;
 
 namespace Application
